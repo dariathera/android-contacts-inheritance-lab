@@ -1,9 +1,10 @@
 package ru.yandex.practicum.contacts.presentation.sort;
+import ru.yandex.practicum.contacts.presentation.base.ContactsOrderTypeUi;
 
 import androidx.annotation.NonNull;
 
-public class SortTypeUI {
-
+public class SortTypeUI extends ContactsOrderTypeUi {
+    /*
     private final String type;
     private final boolean isSelected;
 
@@ -19,7 +20,12 @@ public class SortTypeUI {
     public boolean isSelected() {
         return isSelected;
     }
+    */
+    public SortTypeUI(@NonNull String type, boolean isSelected) {
+        super(type, isSelected);
 
+    }
+    @Override
     public String createLogMessage() {
         return "Выбран тип сортировки: " + type;
     }
